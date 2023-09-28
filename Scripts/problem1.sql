@@ -8,4 +8,4 @@ LIMIT 9;
 
 SELECT a.firstName || ' ' || a.lastName as employeeName, b.firstName || ' ' || b.lastName as managerName
 FROM employee a
-INNER JOIN employee b on b.managerId = a.managerId;
+INNER JOIN employee b on a.managerId = b.employeeId;
